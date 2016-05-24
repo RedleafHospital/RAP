@@ -12,6 +12,7 @@
 		4377AFE71CF3DD3E000C846B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4377AFE51CF3DD3E000C846B /* Main.storyboard */; };
 		4377AFE91CF3DD3E000C846B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4377AFE81CF3DD3E000C846B /* Assets.xcassets */; };
 		4377AFEC1CF3DD3E000C846B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4377AFEA1CF3DD3E000C846B /* LaunchScreen.storyboard */; };
+		4377AFF41CF3DEBC000C846B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4377AFF31CF3DEBC000C846B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4377AFE81CF3DD3E000C846B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4377AFEB1CF3DD3E000C846B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4377AFED1CF3DD3E000C846B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4377AFF31CF3DEBC000C846B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		4377AFD51CF3DD3E000C846B = {
 			isa = PBXGroup;
 			children = (
+				4377AFF31CF3DEBC000C846B /* README.md */,
 				4377AFE01CF3DD3E000C846B /* RAP */,
 				4377AFDF1CF3DD3E000C846B /* Products */,
 			);
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4377AFF41CF3DEBC000C846B /* README.md in Sources */,
 				4377AFE41CF3DD3E000C846B /* ViewController.swift in Sources */,
 				4377AFE21CF3DD3E000C846B /* AppDelegate.swift in Sources */,
 			);
@@ -287,6 +291,7 @@
 				4377AFF21CF3DD3E000C846B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
