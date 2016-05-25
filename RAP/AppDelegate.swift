@@ -44,3 +44,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension UIColor{
+    public class func darkPinkColor() -> UIColor{
+        return UIColor(red: 240 / 255, green: 116 / 255, blue: 117 / 255, alpha: 1)
+    }
+    
+    public class func pinkColor() -> UIColor{
+        return UIColor(red: 255 / 255, green: 125 / 255, blue: 125 / 255, alpha: 1)
+    }
+}
+
+extension UIViewController{
+    func setupDefaultProperty(){
+        //设置状态栏为白色字
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        //导航栏半透明、底色
+        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.barTintColor = UIColor.darkPinkColor()
+        //导航栏字体颜色
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "OpenSans-Light", size: 23.0)!]
+        //导航栏按钮颜色
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        //内容背景颜色
+        self.view.backgroundColor = UIColor.pinkColor()
+    }
+}
+
