@@ -12,6 +12,7 @@
 		432A3D341CF7D3BC00293656 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 432A3D321CF7D3BC00293656 /* OpenSans-Light.ttf */; };
 		432A3D361CF7DCFC00293656 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A3D351CF7DCFC00293656 /* LoginViewController.swift */; };
 		432A3D3A1CF80EB900293656 /* UnderLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A3D391CF80EB900293656 /* UnderLineView.swift */; };
+		432A3D3C1CF8287700293656 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A3D3B1CF8287700293656 /* LoginModel.swift */; };
 		4377AFE21CF3DD3E000C846B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377AFE11CF3DD3E000C846B /* AppDelegate.swift */; };
 		4377AFE41CF3DD3E000C846B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377AFE31CF3DD3E000C846B /* ViewController.swift */; };
 		4377AFE71CF3DD3E000C846B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4377AFE51CF3DD3E000C846B /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		432A3D321CF7D3BC00293656 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		432A3D351CF7DCFC00293656 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		432A3D391CF80EB900293656 /* UnderLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnderLineView.swift; sourceTree = "<group>"; };
+		432A3D3B1CF8287700293656 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		4377AFDE1CF3DD3E000C846B /* RAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4377AFE11CF3DD3E000C846B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4377AFE31CF3DD3E000C846B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				4377AFE11CF3DD3E000C846B /* AppDelegate.swift */,
 				4377AFE31CF3DD3E000C846B /* ViewController.swift */,
 				431CB8241CF448A300238EE1 /* ResizeNavigationBar.swift */,
+				432A3D3B1CF8287700293656 /* LoginModel.swift */,
 				432A3D351CF7DCFC00293656 /* LoginViewController.swift */,
 				432A3D391CF80EB900293656 /* UnderLineView.swift */,
 				4377AFE51CF3DD3E000C846B /* Main.storyboard */,
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				432A3D361CF7DCFC00293656 /* LoginViewController.swift in Sources */,
+				432A3D3C1CF8287700293656 /* LoginModel.swift in Sources */,
 				431CB8251CF448A300238EE1 /* ResizeNavigationBar.swift in Sources */,
 				4377AFE41CF3DD3E000C846B /* ViewController.swift in Sources */,
 				4377AFE21CF3DD3E000C846B /* AppDelegate.swift in Sources */,
