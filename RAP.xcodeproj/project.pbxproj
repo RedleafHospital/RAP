@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		431CB8251CF448A300238EE1 /* ResizeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CB8241CF448A300238EE1 /* ResizeNavigationBar.swift */; };
+		432A3D331CF7D3BC00293656 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 432A3D311CF7D3BC00293656 /* OpenSans-ExtraBold.ttf */; };
+		432A3D341CF7D3BC00293656 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 432A3D321CF7D3BC00293656 /* OpenSans-Light.ttf */; };
 		4377AFE21CF3DD3E000C846B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377AFE11CF3DD3E000C846B /* AppDelegate.swift */; };
 		4377AFE41CF3DD3E000C846B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377AFE31CF3DD3E000C846B /* ViewController.swift */; };
 		4377AFE71CF3DD3E000C846B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4377AFE51CF3DD3E000C846B /* Main.storyboard */; };
 		4377AFE91CF3DD3E000C846B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4377AFE81CF3DD3E000C846B /* Assets.xcassets */; };
 		4377AFEC1CF3DD3E000C846B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4377AFEA1CF3DD3E000C846B /* LaunchScreen.storyboard */; };
 		4377AFF61CF3EE79000C846B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4377AFF51CF3EE79000C846B /* Podfile */; };
-		43FE7E231CF58F6000DF2A8C /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43FE7E211CF58F6000DF2A8C /* OpenSans-ExtraBold.ttf */; };
-		43FE7E241CF58F6000DF2A8C /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43FE7E221CF58F6000DF2A8C /* OpenSans-Light.ttf */; };
 		7056CF52726D38FDD3DDCE03 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7B240CBC2BAB0997C880B0 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +23,8 @@
 		05834D88EF4ED3C5CFDF46A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1B7B240CBC2BAB0997C880B0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		431CB8241CF448A300238EE1 /* ResizeNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeNavigationBar.swift; sourceTree = "<group>"; };
+		432A3D311CF7D3BC00293656 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		432A3D321CF7D3BC00293656 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		4377AFDE1CF3DD3E000C846B /* RAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4377AFE11CF3DD3E000C846B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4377AFE31CF3DD3E000C846B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,8 +33,6 @@
 		4377AFEB1CF3DD3E000C846B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4377AFED1CF3DD3E000C846B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4377AFF51CF3EE79000C846B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		43FE7E211CF58F6000DF2A8C /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBold.ttf"; path = "../../Downloads/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
-		43FE7E221CF58F6000DF2A8C /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "../../Downloads/OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		A97CFFA78E507FDB113C1BEF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,8 +93,8 @@
 		43FE7E201CF58F4500DF2A8C /* ttf */ = {
 			isa = PBXGroup;
 			children = (
-				43FE7E211CF58F6000DF2A8C /* OpenSans-ExtraBold.ttf */,
-				43FE7E221CF58F6000DF2A8C /* OpenSans-Light.ttf */,
+				432A3D311CF7D3BC00293656 /* OpenSans-ExtraBold.ttf */,
+				432A3D321CF7D3BC00293656 /* OpenSans-Light.ttf */,
 			);
 			name = ttf;
 			sourceTree = "<group>";
@@ -170,12 +170,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43FE7E241CF58F6000DF2A8C /* OpenSans-Light.ttf in Resources */,
+				432A3D341CF7D3BC00293656 /* OpenSans-Light.ttf in Resources */,
 				4377AFEC1CF3DD3E000C846B /* LaunchScreen.storyboard in Resources */,
 				4377AFE91CF3DD3E000C846B /* Assets.xcassets in Resources */,
 				4377AFF61CF3EE79000C846B /* Podfile in Resources */,
 				4377AFE71CF3DD3E000C846B /* Main.storyboard in Resources */,
-				43FE7E231CF58F6000DF2A8C /* OpenSans-ExtraBold.ttf in Resources */,
+				432A3D331CF7D3BC00293656 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
