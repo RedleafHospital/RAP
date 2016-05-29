@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import APESuperHUD
 
 protocol LoginDelegate {
     func getLocalSavedUser() -> User?
-    func login(user: User) -> Bool
+    func login(user: User, success: (() -> Void)?, error: (() -> Void)?)
     func setLocalUser(user: User)
 }
 
@@ -18,13 +19,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var passWord: UITextField!
     
-    private var logined: Bool = false
     private var loginModel = LoginModel()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        
+        //初始化登录界面
+        setupBackgroundColor()
+        setupGesture()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        loginAndInitFirstScreen()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,14 +43,13 @@ class LoginViewController: UIViewController {
         return true
     }
     
-    private func setup(){
+    private func loginAndInitFirstScreen(){
         //检查本地是否有存储的帐号
         if let user = loginModel.getLocalSavedUser(){
             //如果存在，直接跳转到功能界面
+            login(user)
         }else{
             //如果不存在，跳入登录界面
-            setupBackgroundColor()
-            setupGesture()
         }
     }
     
@@ -78,28 +84,63 @@ class LoginViewController: UIViewController {
         accept()
     }
     
-    private func checkAccountIsNotEmpty() -> Bool{
+    private func checkAccountIsNotEmpty() -> User?{
         if self.userName.text?.isEmpty == true{
-            return false
+            APESuperHUD.showOrUpdateHUD(icon: .SadFace, message: "Username is empty!", duration: 0.8, presentingView: self.view, completion: { _ in
+                // Completed
+            })
+            return nil
         }
         
         if self.passWord.text?.isEmpty == true{
-            return false
+            APESuperHUD.showOrUpdateHUD(icon: .SadFace, message: "Password is empty!", duration: 0.8, presentingView: self.view, completion: { _ in
+                // Completed
+            })
+            return nil
         }
         
-        return true
+        return User(userName: self.userName.text!, passWord: self.passWord.text!)
     }
     
     private func accept(){
         //去掉键盘
         resignAllFieldsFirstResponder()
         //检查账户名、密码是否为空
-        guard checkAccountIsNotEmpty() else { return }
+        guard let user = checkAccountIsNotEmpty() else { return }
         //登录
-        login()
+        login(user)
     }
     
-    private func login(){
-        print("logined")
+    private func login(user: User){
+        //处理标志开始
+        APESuperHUD.showOrUpdateHUD(loadingIndicator: .Standard, message: "Logining...", presentingView: self.view)
+
+        //登录，并处理成功、失败时的闭包
+        loginModel.login(user, success: {
+            APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+            self.loginModel.setLocalUser(user)
+            self.segueToMainScreen()
+        }){
+            APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+            APESuperHUD.showOrUpdateHUD(icon: .SadFace, message: "Incorrect username or password!", duration: 0.8, presentingView: self.view, completion: { _ in
+                // Completed
+                UIView.animateWithDuration(1, animations: {
+                    self.userName.alpha = 0
+                    self.passWord.alpha = 0
+                    }, completion: { (_) in
+                        UIView.animateWithDuration(0.5, animations: {
+                            self.userName.text = user.userName
+                            self.passWord.text = ""
+                            self.userName.alpha = 1
+                            self.passWord.alpha = 1
+                        })
+                })
+            })
+        }
+    }
+    
+    private func segueToMainScreen(){
+        let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainScreenViewController")
+        presentViewController(mainViewController!, animated: true, completion: nil)
     }
 }

@@ -1,15 +1,27 @@
 PODS:
   - Alamofire (3.4.0)
+  - APESuperHUD (0.5.3)
   - Charts (2.2.4):
     - Charts/Core (= 2.2.4)
   - Charts/Core (2.2.4)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - APESuperHUD (from `https://github.com/apegroup/APESuperHUD.git`)
   - Charts (~> 2.2.4)
+
+EXTERNAL SOURCES:
+  APESuperHUD:
+    :git: https://github.com/apegroup/APESuperHUD.git
+
+CHECKOUT OPTIONS:
+  APESuperHUD:
+    :commit: c451d198afce7b398b21600563696cd4e16d4ba4
+    :git: https://github.com/apegroup/APESuperHUD.git
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  APESuperHUD: a354d32c75ab563a9d75ba1704fcae80b1d5e32a
   Charts: a9e735c83c6d376ade20f6612dcf0ba217394a49
 
 COCOAPODS: 0.39.0

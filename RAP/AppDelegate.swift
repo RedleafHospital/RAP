@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APESuperHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        setupHUD()
         return true
     }
 
@@ -44,6 +46,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+private func setupHUD(){
+    APESuperHUD.appearance.fontName = ConstantValue.lightFont
+    APESuperHUD.appearance.backgroundColor = UIColor.clearColor()
+    APESuperHUD.appearance.foregroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.8)
+}
+
 extension UIColor{
     public class func darkPinkColor() -> UIColor{
         return UIColor(red: 240 / 255, green: 116 / 255, blue: 117 / 255, alpha: 1)
@@ -62,11 +70,16 @@ extension UIViewController{
         self.navigationController?.navigationBar.translucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor.darkPinkColor()
         //导航栏字体颜色
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "OpenSans-Light", size: 23.0)!]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: ConstantValue.lightFont, size: 23.0)!]
         //导航栏按钮颜色
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         //内容背景颜色
         self.view.backgroundColor = UIColor.pinkColor()
     }
+}
+
+struct ConstantValue{
+    static let lightFont: String = "OpenSans-Light"
+    static let boldFond: String = "OpenSans-ExtraBold"
 }
 

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2A32028A61BC170100FA67CF'
-               BlueprintName = 'Alamofire'
+               BlueprintIdentifier = '688220C1D27536C5B0E258C1'
+               BlueprintName = 'APESuperHUD'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Alamofire.framework'>
+               BuildableName = 'APESuperHUD.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
