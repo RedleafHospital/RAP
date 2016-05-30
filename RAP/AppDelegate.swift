@@ -66,6 +66,7 @@ extension UIViewController{
     func setupDefaultProperty(){
         //设置状态栏为白色字
         UIApplication.sharedApplication().statusBarStyle = .LightContent
+        self.navigationController?.navigationBar.barStyle = .Black
         //导航栏半透明、底色
         self.navigationController?.navigationBar.translucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor.darkPinkColor()
@@ -81,5 +82,8 @@ extension UIViewController{
 struct ConstantValue{
     static let lightFont: String = "OpenSans-Light"
     static let boldFond: String = "OpenSans-ExtraBold"
+    static let userInfo: String = "UserInfo"
+    static let userName: String = "userName"
+    static let passWord: String = "passWord"
 }
 

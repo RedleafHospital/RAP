@@ -124,7 +124,7 @@ class LoginViewController: UIViewController {
             APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
             APESuperHUD.showOrUpdateHUD(icon: .SadFace, message: "Incorrect username or password!", duration: 0.8, presentingView: self.view, completion: { _ in
                 // Completed
-                UIView.animateWithDuration(1, animations: {
+                UIView.animateWithDuration(0.5, animations: {
                     self.userName.alpha = 0
                     self.passWord.alpha = 0
                     }, completion: { (_) in
@@ -140,7 +140,8 @@ class LoginViewController: UIViewController {
     }
     
     private func segueToMainScreen(){
-        let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainScreenViewController")
-        presentViewController(mainViewController!, animated: true, completion: nil)
+        let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainScreenNavigationController")
+        mainViewController?.view.backgroundColor = UIColor.whiteColor()
+        self.presentViewController(mainViewController!, animated: false, completion: nil)
     }
 }

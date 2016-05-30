@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430CAC1B1CFBD482003433CF /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CAC1A1CFBD482003433CF /* MainScreenCollectionViewCell.swift */; };
 		431CB8251CF448A300238EE1 /* ResizeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CB8241CF448A300238EE1 /* ResizeNavigationBar.swift */; };
 		432A3D331CF7D3BC00293656 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 432A3D311CF7D3BC00293656 /* OpenSans-ExtraBold.ttf */; };
 		432A3D341CF7D3BC00293656 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 432A3D321CF7D3BC00293656 /* OpenSans-Light.ttf */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		05834D88EF4ED3C5CFDF46A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1B7B240CBC2BAB0997C880B0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		430CAC1A1CFBD482003433CF /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		431CB8241CF448A300238EE1 /* ResizeNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeNavigationBar.swift; sourceTree = "<group>"; };
 		432A3D311CF7D3BC00293656 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		432A3D321CF7D3BC00293656 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				432A3D351CF7DCFC00293656 /* LoginViewController.swift */,
 				432A3D391CF80EB900293656 /* UnderLineView.swift */,
 				439835541CF9339A0065088B /* MainScreenViewController.swift */,
+				430CAC1A1CFBD482003433CF /* MainScreenCollectionViewCell.swift */,
 				4377AFE51CF3DD3E000C846B /* Main.storyboard */,
 				4377AFE81CF3DD3E000C846B /* Assets.xcassets */,
 				4377AFEA1CF3DD3E000C846B /* LaunchScreen.storyboard */,
@@ -251,6 +254,7 @@
 				439835551CF9339A0065088B /* MainScreenViewController.swift in Sources */,
 				431CB8251CF448A300238EE1 /* ResizeNavigationBar.swift in Sources */,
 				4377AFE41CF3DD3E000C846B /* ViewController.swift in Sources */,
+				430CAC1B1CFBD482003433CF /* MainScreenCollectionViewCell.swift in Sources */,
 				4377AFE21CF3DD3E000C846B /* AppDelegate.swift in Sources */,
 				432A3D3A1CF80EB900293656 /* UnderLineView.swift in Sources */,
 			);
