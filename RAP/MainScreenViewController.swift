@@ -8,17 +8,31 @@
 
 import UIKit
 
-class MainScreenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MainScreenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SideBarDelegate {
     let functionItems = MainScreenModel().items
     let functionItemInset = UIEdgeInsets(top: 55, left: 20, bottom: 10, right: 20)
     let itemClickDuration: NSTimeInterval = 0.3
     let numberOfOneRow: CGFloat = 3
+    
+    var sideBar: SideBar?
+    var tapGesture: UITapGestureRecognizer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setupDefaultProperty()
+        setupSideBar()
+    }
+    
+    func tapHandle(tapGesture: UITapGestureRecognizer){
+        sideBar?.showSideBar(false)
+        self.view.removeGestureRecognizer(tapGesture)
+    }
+    
+    func setupSideBar(){
+        sideBar = SideBar(sourceView: self.parentViewController!.view, menu: ["第一项", "第二项", "第三项"])
+        sideBar?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,10 +95,20 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
         let itemController = self.storyboard?.instantiateViewControllerWithIdentifier(functionItems[indexPath.row].viewControllerName)
         self.navigationController?.pushViewController(itemController!, animated: true)
         print(indexPath.row)
+    }
+    
+    @IBAction func clickMenu(sender: UIBarButtonItem) {
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(MainScreenViewController.tapHandle(_:)))
+        self.view.addGestureRecognizer(tapGesture!)
+        
+        sideBar?.showSideBar(true)
+    }
+    
+    func didSelectedSideBarItem(index: Int){
+        print(index)
     }
     
     deinit{

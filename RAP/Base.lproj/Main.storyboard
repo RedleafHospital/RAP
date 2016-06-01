@@ -220,7 +220,14 @@
                             <constraint firstItem="zbP-Xb-gS2" firstAttribute="leading" secondItem="4CR-zn-hUk" secondAttribute="leading" id="tnd-3R-xtb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DASHBOARD" id="FDv-g6-IxG"/>
+                    <navigationItem key="navigationItem" title="DASHBOARD" id="FDv-g6-IxG">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="lZ1-LB-7Aq">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="clickMenu:" destination="0Tl-dp-aRU" id="YBg-iX-Xvc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7n6-Le-gLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,6 +286,7 @@
     </scenes>
     <resources>
         <image name="chart" width="85" height="85"/>
+        <image name="menu" width="40" height="40"/>
         <image name="passwd" width="64" height="83"/>
         <image name="user" width="80" height="81"/>
     </resources>

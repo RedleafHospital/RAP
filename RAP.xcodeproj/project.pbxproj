@@ -10,6 +10,8 @@
 		4300E3291CFD275E00FE8DA1 /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4300E3281CFD275E00FE8DA1 /* MainScreenModel.swift */; };
 		430CAC1B1CFBD482003433CF /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CAC1A1CFBD482003433CF /* MainScreenCollectionViewCell.swift */; };
 		431CB8251CF448A300238EE1 /* ResizeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CB8241CF448A300238EE1 /* ResizeNavigationBar.swift */; };
+		432321C11CFE7C8400762271 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432321BF1CFE7C8400762271 /* SideBar.swift */; };
+		432321C21CFE7C8400762271 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432321C01CFE7C8400762271 /* SideBarTableViewController.swift */; };
 		432A3D331CF7D3BC00293656 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 432A3D311CF7D3BC00293656 /* OpenSans-ExtraBold.ttf */; };
 		432A3D341CF7D3BC00293656 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 432A3D321CF7D3BC00293656 /* OpenSans-Light.ttf */; };
 		432A3D361CF7DCFC00293656 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A3D351CF7DCFC00293656 /* LoginViewController.swift */; };
@@ -31,6 +33,8 @@
 		4300E3281CFD275E00FE8DA1 /* MainScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
 		430CAC1A1CFBD482003433CF /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		431CB8241CF448A300238EE1 /* ResizeNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeNavigationBar.swift; sourceTree = "<group>"; };
+		432321BF1CFE7C8400762271 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		432321C01CFE7C8400762271 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		432A3D311CF7D3BC00293656 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		432A3D321CF7D3BC00293656 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		432A3D351CF7DCFC00293656 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 				4377AFE31CF3DD3E000C846B /* ViewController.swift */,
 				432A3D351CF7DCFC00293656 /* LoginViewController.swift */,
 				439835541CF9339A0065088B /* MainScreenViewController.swift */,
+				432321C01CFE7C8400762271 /* SideBarTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 				431CB8241CF448A300238EE1 /* ResizeNavigationBar.swift */,
 				432A3D391CF80EB900293656 /* UnderLineView.swift */,
 				430CAC1A1CFBD482003433CF /* MainScreenCollectionViewCell.swift */,
+				432321BF1CFE7C8400762271 /* SideBar.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				432321C11CFE7C8400762271 /* SideBar.swift in Sources */,
 				432A3D361CF7DCFC00293656 /* LoginViewController.swift in Sources */,
 				432A3D3C1CF8287700293656 /* LoginModel.swift in Sources */,
 				439835551CF9339A0065088B /* MainScreenViewController.swift in Sources */,
@@ -285,6 +292,7 @@
 				4377AFE21CF3DD3E000C846B /* AppDelegate.swift in Sources */,
 				432A3D3A1CF80EB900293656 /* UnderLineView.swift in Sources */,
 				4300E3291CFD275E00FE8DA1 /* MainScreenModel.swift in Sources */,
+				432321C21CFE7C8400762271 /* SideBarTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
