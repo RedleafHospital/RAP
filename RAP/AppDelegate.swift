@@ -76,6 +76,9 @@ extension UIViewController{
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         //内容背景颜色
         self.view.backgroundColor = UIColor.pinkColor()
+        //后退按钮去掉描述
+        self.navigationItem.backBarButtonItem = UIBarButtonItem()
+        self.navigationItem.backBarButtonItem?.title = ""
     }
 }
 

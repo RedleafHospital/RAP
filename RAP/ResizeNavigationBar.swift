@@ -53,4 +53,8 @@ class ResizeNavigationBar: UINavigationBar {
             }
         }
     }
+    
+    deinit{
+        print("ResizeNavigationBar deinit")
+    }
 }

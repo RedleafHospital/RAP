@@ -9,9 +9,10 @@
 import UIKit
 
 class MainScreenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    let functionItems = ["1", "2", "3", "4", "5"]
-    
+    let functionItems = MainScreenModel().items
     let functionItemInset = UIEdgeInsets(top: 55, left: 20, bottom: 10, right: 20)
+    let itemClickDuration: NSTimeInterval = 0.3
+    let numberOfOneRow: CGFloat = 3
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +24,6 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate, UICo
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        UIView.transitionWithView(self.view, duration: 1.5, options: UIViewAnimationOptions.TransitionFlipFromBottom, animations: { () -> Void in
-            
-            }, completion: nil)
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -50,7 +43,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let width = (self.view.bounds.width - functionItemInset.left - functionItemInset.right - 20) / 3
+        let width = (self.view.bounds.width - functionItemInset.left - functionItemInset.right - 20) / numberOfOneRow
         return CGSizeMake(width, width)
     }
     
@@ -60,7 +53,42 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate, UICo
         cell.layer.borderWidth = 3
         cell.layer.borderColor = UIColor.whiteColor().CGColor
         cell.layer.cornerRadius = cell.bounds.width / 2
+        cell.selectedBackgroundView = UIView(frame: cell.frame)
+        cell.selectedBackgroundView!.backgroundColor = UIColor.darkPinkColor()
+        
+        cell.logoImageView.image = UIImage(named: functionItems[indexPath.row].logoImageURL
+        )
+        cell.logoLabel.text = functionItems[indexPath.row].logoLabelText
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.cellForItemAtIndexPath(indexPath)
+        UIView.animateWithDuration(itemClickDuration) {
+            cell?.transform = CGAffineTransformMakeScale(2, 2)
+        }
+    }
+    
+    func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.cellForItemAtIndexPath(indexPath)
+        UIView.animateWithDuration(itemClickDuration) {
+            cell?.transform = CGAffineTransformMakeScale(1, 1)
+        }
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let itemController = self.storyboard?.instantiateViewControllerWithIdentifier(functionItems[indexPath.row].viewControllerName)
+        self.navigationController?.pushViewController(itemController!, animated: true)
+        print(indexPath.row)
+    }
+    
+    deinit{
+        print("MainScreenViewController deinit")
     }
 
 }

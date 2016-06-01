@@ -56,6 +56,6 @@ class LoginModel: NSObject, LoginDelegate {
     }
     
     deinit{
-        print("LoginModel")
+        print("LoginModel deinit")
     }
 }

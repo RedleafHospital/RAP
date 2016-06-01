@@ -11,4 +11,8 @@ import UIKit
 class MainScreenCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var logoLabel: UILabel!
+    
+    deinit{
+        print("MainScreenCollectionViewCell deinit")
+    }
 }

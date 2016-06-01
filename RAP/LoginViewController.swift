@@ -15,7 +15,7 @@ protocol LoginDelegate {
     func setLocalUser(user: User)
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UIViewControllerTransitioningDelegate {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var passWord: UITextField!
     
@@ -142,6 +142,50 @@ class LoginViewController: UIViewController {
     private func segueToMainScreen(){
         let mainViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainScreenNavigationController")
         mainViewController?.view.backgroundColor = UIColor.whiteColor()
-        self.presentViewController(mainViewController!, animated: false, completion: nil)
+        mainViewController?.transitioningDelegate = self
+        self.presentViewController(mainViewController!, animated: true, completion: nil)
+    }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return MainScreenAnimator()
+    }
+    
+    deinit{
+        print("LoginViewController deinit")
+    }
+}
+
+//登录的转场动画
+class MainScreenAnimator: NSObject, UIViewControllerAnimatedTransitioning{
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+        return 1
+    }
+    
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+        guard
+            let presentingControllerView = transitionContext.viewForKey(UITransitionContextFromViewKey),
+            let presentedController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey),
+            let presentedControllerView = transitionContext.viewForKey(UITransitionContextToViewKey),
+            let containerView = transitionContext.containerView()
+            else {
+                return
+        }
+        
+        // Position the presented view off the top of the container view
+        presentingControllerView.alpha = 1
+        presentedControllerView.alpha = 0
+        presentedControllerView.frame = transitionContext.finalFrameForViewController(presentedController)
+        
+        containerView.addSubview(presentedControllerView)
+        
+        // Animate the presented view to it's final position
+        UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: .AllowUserInteraction, animations: {
+            
+            presentingControllerView.alpha = 0
+            presentedControllerView.alpha = 1
+            
+            }, completion: {(completed: Bool) -> Void in
+                transitionContext.completeTransition(completed)
+        })
     }
 }

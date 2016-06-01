@@ -20,6 +20,9 @@ class UnderLineView: UIView {
         UIColor.whiteColor().setStroke()
         path.stroke()
     }
- 
+    
+    deinit{
+        print("UnderLineView deinit")
+    }
 
 }
