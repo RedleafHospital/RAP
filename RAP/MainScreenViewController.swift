@@ -96,6 +96,7 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let itemController = self.storyboard?.instantiateViewControllerWithIdentifier(functionItems[indexPath.row].viewControllerName)
+        itemController?.navigationItem.title = functionItems[indexPath.row].logoLabelText
         self.navigationController?.pushViewController(itemController!, animated: true)
         print(indexPath.row)
     }

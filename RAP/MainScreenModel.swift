@@ -18,10 +18,10 @@ class MainScreenModel{
     var items = [MainScreenItem]()
     
     init(){
+        items.append(MainScreenItem(logoImageURL: "chat", logoLabelText: "Contacts", viewControllerName: "ContactsTableViewController"))
         items.append(MainScreenItem(logoImageURL: "chart", logoLabelText: "Childbirth", viewControllerName: "testcontroller"))
         items.append(MainScreenItem(logoImageURL: "friend", logoLabelText: "Clinic Visit", viewControllerName: "testcontroller"))
         items.append(MainScreenItem(logoImageURL: "setting", logoLabelText: "Revenue", viewControllerName: "testcontroller"))
-        items.append(MainScreenItem(logoImageURL: "chat", logoLabelText: "Contacts", viewControllerName: "testcontroller"))
         items.append(MainScreenItem(logoImageURL: "user", logoLabelText: "user", viewControllerName: "testcontroller"))
         
         items.append(MainScreenItem(logoImageURL: "chart", logoLabelText: "chart", viewControllerName: "testcontroller"))

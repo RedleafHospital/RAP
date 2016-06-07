@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4300E3291CFD275E00FE8DA1 /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4300E3281CFD275E00FE8DA1 /* MainScreenModel.swift */; };
+		430C59861D05180500577692 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430C59851D05180500577692 /* ContactsTableViewController.swift */; };
+		430C59881D051B4000577692 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430C59871D051B4000577692 /* ContactsModel.swift */; };
+		430C598A1D05617900577692 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430C59891D05617900577692 /* ContactsTableViewCell.swift */; };
 		430CAC1B1CFBD482003433CF /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CAC1A1CFBD482003433CF /* MainScreenCollectionViewCell.swift */; };
 		431CB8251CF448A300238EE1 /* ResizeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CB8241CF448A300238EE1 /* ResizeNavigationBar.swift */; };
 		432321C11CFE7C8400762271 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432321BF1CFE7C8400762271 /* SideBar.swift */; };
@@ -31,6 +34,9 @@
 		05834D88EF4ED3C5CFDF46A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1B7B240CBC2BAB0997C880B0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4300E3281CFD275E00FE8DA1 /* MainScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
+		430C59851D05180500577692 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		430C59871D051B4000577692 /* ContactsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
+		430C59891D05617900577692 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		430CAC1A1CFBD482003433CF /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		431CB8241CF448A300238EE1 /* ResizeNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeNavigationBar.swift; sourceTree = "<group>"; };
 		432321BF1CFE7C8400762271 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
@@ -77,6 +83,7 @@
 			children = (
 				432A3D3B1CF8287700293656 /* LoginModel.swift */,
 				4300E3281CFD275E00FE8DA1 /* MainScreenModel.swift */,
+				430C59871D051B4000577692 /* ContactsModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -88,6 +95,7 @@
 				432A3D351CF7DCFC00293656 /* LoginViewController.swift */,
 				439835541CF9339A0065088B /* MainScreenViewController.swift */,
 				432321C01CFE7C8400762271 /* SideBarTableViewController.swift */,
+				430C59851D05180500577692 /* ContactsTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -99,6 +107,7 @@
 				432A3D391CF80EB900293656 /* UnderLineView.swift */,
 				430CAC1A1CFBD482003433CF /* MainScreenCollectionViewCell.swift */,
 				432321BF1CFE7C8400762271 /* SideBar.swift */,
+				430C59891D05617900577692 /* ContactsTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -282,8 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430C598A1D05617900577692 /* ContactsTableViewCell.swift in Sources */,
 				432321C11CFE7C8400762271 /* SideBar.swift in Sources */,
 				432A3D361CF7DCFC00293656 /* LoginViewController.swift in Sources */,
+				430C59861D05180500577692 /* ContactsTableViewController.swift in Sources */,
 				432A3D3C1CF8287700293656 /* LoginModel.swift in Sources */,
 				439835551CF9339A0065088B /* MainScreenViewController.swift in Sources */,
 				431CB8251CF448A300238EE1 /* ResizeNavigationBar.swift in Sources */,
@@ -292,6 +303,7 @@
 				4377AFE21CF3DD3E000C846B /* AppDelegate.swift in Sources */,
 				432A3D3A1CF80EB900293656 /* UnderLineView.swift in Sources */,
 				4300E3291CFD275E00FE8DA1 /* MainScreenModel.swift in Sources */,
+				430C59881D051B4000577692 /* ContactsModel.swift in Sources */,
 				432321C21CFE7C8400762271 /* SideBarTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +418,7 @@
 			baseConfigurationReference = 05834D88EF4ED3C5CFDF46A2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RAP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -419,6 +432,7 @@
 			baseConfigurationReference = A97CFFA78E507FDB113C1BEF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RAP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
