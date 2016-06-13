@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ContactsDetailViewController.detailContact.didset:ContactsDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "detailContact?.mobilePhone">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ContactsDetailViewController.mobileLabel.didset:ContactsDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "mobileLabel?.titleLabel?.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

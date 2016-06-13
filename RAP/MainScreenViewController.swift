@@ -34,6 +34,13 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate, UICo
         sideBar = SideBar(sourceView: self.parentViewController!.view, menu: ["第一项", "第二项", "第三项"])
         sideBar?.delegate = self
     }
+    
+    func sideBarWillClose(){
+        //解决侧滑收入后，点击时间没有清除的问题
+        if let gesture = tapGesture{
+            self.view.removeGestureRecognizer(gesture)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -98,7 +105,6 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate, UICo
         let itemController = self.storyboard?.instantiateViewControllerWithIdentifier(functionItems[indexPath.row].viewControllerName)
         itemController?.navigationItem.title = functionItems[indexPath.row].logoLabelText
         self.navigationController?.pushViewController(itemController!, animated: true)
-        print(indexPath.row)
     }
     
     @IBAction func clickMenu(sender: UIBarButtonItem) {
