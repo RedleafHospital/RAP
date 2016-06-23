@@ -1,7 +1,7 @@
 {
   "name": "APESuperHUD",
   "summary": "A simple way to display a HUD with a message or progress information in your application.",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "homepage": "https://github.com/apegroup/APESuperHUD",
   "license": "MIT",
   "authors": {
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/apegroup/APESuperHUD.git",
-    "tag": "0.5.3"
+    "tag": "0.5.4"
   },
   "social_media_url": "https://twitter.com/apegroup",
   "platforms": {

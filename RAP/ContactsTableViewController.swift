@@ -9,14 +9,13 @@
 import UIKit
 
 class ContactsTableViewController: UITableViewController {
-    var contactItems = [Contacts]()
+    var contactModel = ContactsModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupDefaultProperty()
-        contactItems = getContactItems()
-        
+        contactModel.getAllContacts()
         setupTableView()
     }
     
@@ -31,26 +30,7 @@ class ContactsTableViewController: UITableViewController {
     }
     
     func updateContacts(){
-        print("update contacts")
-    }
-    
-    func getContactItems() -> [Contacts]{
-        var contactItems = [Contacts]()
-        
-        //测试代码，后续填入正确的取值逻辑
-        contactItems.append(Contacts(name: "刘颖奥", department: "信息部", mobilePhone: "18930337826", telephone: "1553", email: "yingao.liu@redleafhospital.com", photo: UIImagePNGRepresentation(UIImage(named: "defaultphoto")!)))
-        contactItems.append(Contacts(name: "刘颖奥", department: "信息部", mobilePhone: "18930337826", telephone: "1553", email: "yingao.liu@redleafhospital.com", photo: nil))
-        contactItems.append(Contacts(name: "刘颖奥", department: "信息部", mobilePhone: "18930337826", telephone: "1553", email: "yingao.liu@redleafhospital.com", photo: nil))
-        contactItems.append(Contacts(name: "刘颖奥", department: "信息部", mobilePhone: "18930337826", telephone: "1553", email: "yingao.liu@redleafhospital.com", photo: nil))
-        contactItems.append(Contacts(name: "刘颖奥", department: "信息部", mobilePhone: "18930337826", telephone: "1553", email: "yingao.liu@redleafhospital.com", photo: nil))
-        contactItems.append(Contacts(name: "刘颖奥", department: "信息部", mobilePhone: "18930337826", telephone: "1553", email: "yingao.liu@redleafhospital.com", photo: nil))
-        contactItems.append(Contacts(name: "刘颖奥", department: "信息部", mobilePhone: "18930337826", telephone: "1553", email: "yingao.liu@redleafhospital.com", photo: nil))
-        contactItems.append(Contacts(name: "刘颖奥", department: "信息部", mobilePhone: "18930337826", telephone: "1553", email: "yingao.liu@redleafhospital.com", photo: nil))
-        contactItems.append(Contacts(name: "刘颖奥", department: "信息部", mobilePhone: "18930337826", telephone: "1553", email: "yingao.liu@redleafhospital.com", photo: nil))
-        contactItems.append(Contacts(name: "刘颖奥", department: "信息部", mobilePhone: "18930337826", telephone: "1553", email: "yingao.liu@redleafhospital.com", photo: nil))
-        contactItems.append(Contacts(name: "刘颖奥", department: "信息部", mobilePhone: "18930337826", telephone: "1553", email: "yingao.liu@redleafhospital.com", photo: nil))
-        
-        return contactItems
+        contactModel.updateAllContacts()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -58,7 +38,7 @@ class ContactsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contactItems.count
+        return contactModel.contactItems.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -74,8 +54,8 @@ class ContactsTableViewController: UITableViewController {
         //字体
         cell?.nameLabel?.font = UIFont(name: ConstantValue.boldFond, size: 19.0)
         cell?.descriptionLabel?.font = UIFont(name: ConstantValue.lightFont, size: 14.0)
-        cell?.nameLabel?.text = contactItems[indexPath.row].name
-        cell?.descriptionLabel?.text = contactItems[indexPath.row].department
+        cell?.nameLabel?.text = contactModel.contactItems[indexPath.row].name
+        cell?.descriptionLabel?.text = contactModel.contactItems[indexPath.row].department
         
         cell?.selectedBackgroundView = UIView(frame: cell!.frame)
         cell?.selectedBackgroundView!.backgroundColor = UIColor.darkPinkColor()
@@ -90,8 +70,8 @@ class ContactsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailController = self.storyboard?.instantiateViewControllerWithIdentifier("ContactsDetailViewController") as? ContactsDetailViewController
         
-        detailController?.navigationItem.title = contactItems[indexPath.row].name
-        detailController?.detailContact = contactItems[indexPath.row]
+        detailController?.navigationItem.title = contactModel.contactItems[indexPath.row].name
+        detailController?.detailContact = contactModel.contactItems[indexPath.row]
         
         self.navigationController?.pushViewController(detailController!, animated: true)
     }
@@ -104,7 +84,7 @@ class ContactsTableViewController: UITableViewController {
         let phone = UITableViewRowAction(style: .Normal, title: "Call") { action, index in
             print("phone button tapped")
             
-            let contact = self.contactItems[indexPath.row]
+            let contact = self.contactModel.contactItems[indexPath.row]
             let phoneNumber = "tel://" + contact.mobilePhone
             UIApplication.sharedApplication().openURL(NSURL(string: phoneNumber)!)
         }
@@ -113,7 +93,7 @@ class ContactsTableViewController: UITableViewController {
         let email = UITableViewRowAction(style: .Normal, title: "Email") { action, index in
             print("email button tapped")
             
-            let contact = self.contactItems[indexPath.row]
+            let contact = self.contactModel.contactItems[indexPath.row]
             var email = "mailto://"
             if contact.email != nil{
                 email += contact.email!
@@ -123,5 +103,9 @@ class ContactsTableViewController: UITableViewController {
         email.backgroundColor = UIColor.darkPinkColor()
         
         return [email, phone]
+    }
+    
+    deinit{
+        print("ContactsTableViewController deinit")
     }
 }

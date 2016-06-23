@@ -15,8 +15,14 @@
             <string>OpenSans-Extrabold</string>
             <string>OpenSans-Extrabold</string>
             <string>OpenSans-Extrabold</string>
+            <string>OpenSans-Extrabold</string>
+            <string>OpenSans-Extrabold</string>
+            <string>OpenSans-Extrabold</string>
         </mutableArray>
         <mutableArray key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+            <string>OpenSans-Light</string>
+            <string>OpenSans-Light</string>
             <string>OpenSans-Light</string>
             <string>OpenSans-Light</string>
             <string>OpenSans-Light</string>
@@ -417,6 +423,97 @@
             </objects>
             <point key="canvasLocation" x="5695" y="454"/>
         </scene>
+        <!--Daily Revenue Report View Controller-->
+        <scene sceneID="J8v-ue-9nh">
+            <objects>
+                <viewController storyboardIdentifier="DailyRevenueReportViewController" id="ybZ-X6-E3C" customClass="DailyRevenueReportViewController" customModule="RAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AiL-DK-dGv"/>
+                        <viewControllerLayoutGuide type="bottom" id="hll-OG-cwN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gUw-0p-eor">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUl-Y2-Qws" customClass="UnderLineView" customModule="RAP" customModuleProvider="target">
+                                <rect key="frame" x="30" y="90" width="600" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Szw-kW-QAR"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="revenues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Co5-zR-9gu">
+                                <rect key="frame" x="50" y="91" width="90.5" height="30"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="122456.98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUm-lK-dMn">
+                                <rect key="frame" x="60.5" y="64" width="80" height="22"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="visits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGz-Q4-TAl">
+                                <rect key="frame" x="170.5" y="91" width="48" height="30"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytf-Ey-pjr">
+                                <rect key="frame" x="199.5" y="64" width="19" height="22"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="appointments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDw-lz-DT9">
+                                <rect key="frame" x="431.5" y="91" width="138.5" height="30"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywy-rt-xXc" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="171" width="560" height="399"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfE-FM-Vm2">
+                                <rect key="frame" x="548.5" y="63" width="21.5" height="25"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kUm-lK-dMn" firstAttribute="trailing" secondItem="Co5-zR-9gu" secondAttribute="trailing" id="4pF-QM-AKI"/>
+                            <constraint firstItem="ytf-Ey-pjr" firstAttribute="centerY" secondItem="zfE-FM-Vm2" secondAttribute="centerY" id="6iB-TQ-xEc"/>
+                            <constraint firstItem="WDw-lz-DT9" firstAttribute="top" secondItem="GUl-Y2-Qws" secondAttribute="bottom" id="8cb-Id-EI8"/>
+                            <constraint firstItem="GUl-Y2-Qws" firstAttribute="width" secondItem="gUw-0p-eor" secondAttribute="width" id="99t-Rc-M0O"/>
+                            <constraint firstItem="hll-OG-cwN" firstAttribute="top" secondItem="ywy-rt-xXc" secondAttribute="bottom" constant="30" id="Agk-Ge-9ZX"/>
+                            <constraint firstItem="GUl-Y2-Qws" firstAttribute="top" secondItem="AiL-DK-dGv" secondAttribute="bottom" constant="70" id="BVb-hz-E27"/>
+                            <constraint firstItem="ywy-rt-xXc" firstAttribute="top" secondItem="WDw-lz-DT9" secondAttribute="bottom" constant="50" id="GpB-Fl-htV"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="GUl-Y2-Qws" secondAttribute="leading" constant="-10" id="LN5-N4-did"/>
+                            <constraint firstItem="Co5-zR-9gu" firstAttribute="leading" secondItem="gUw-0p-eor" secondAttribute="leadingMargin" constant="30" id="Pdf-9e-UiU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WDw-lz-DT9" secondAttribute="trailing" constant="10" id="ZYr-hM-o0I"/>
+                            <constraint firstItem="ywy-rt-xXc" firstAttribute="leading" secondItem="gUw-0p-eor" secondAttribute="leadingMargin" id="Zav-Kt-eyg"/>
+                            <constraint firstItem="zfE-FM-Vm2" firstAttribute="trailing" secondItem="WDw-lz-DT9" secondAttribute="trailing" id="Zj3-az-yYw"/>
+                            <constraint firstItem="Co5-zR-9gu" firstAttribute="centerY" secondItem="WGz-Q4-TAl" secondAttribute="centerY" id="aye-Rc-s36"/>
+                            <constraint firstItem="ytf-Ey-pjr" firstAttribute="trailing" secondItem="WGz-Q4-TAl" secondAttribute="trailing" id="bzj-dk-5GX"/>
+                            <constraint firstItem="ywy-rt-xXc" firstAttribute="trailing" secondItem="gUw-0p-eor" secondAttribute="trailingMargin" id="eYf-Ap-qiP"/>
+                            <constraint firstItem="WGz-Q4-TAl" firstAttribute="leading" secondItem="Co5-zR-9gu" secondAttribute="trailing" constant="30" id="jyE-uy-Pfh"/>
+                            <constraint firstItem="kUm-lK-dMn" firstAttribute="centerY" secondItem="ytf-Ey-pjr" secondAttribute="centerY" id="ms5-YH-dg8"/>
+                            <constraint firstItem="WGz-Q4-TAl" firstAttribute="centerY" secondItem="WDw-lz-DT9" secondAttribute="centerY" id="suK-0N-b6s"/>
+                            <constraint firstItem="GUl-Y2-Qws" firstAttribute="top" secondItem="zfE-FM-Vm2" secondAttribute="bottom" constant="2" id="trL-FY-YLw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barChartView" destination="ywy-rt-xXc" id="hgL-j4-WBR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNL-ij-K9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6233" y="386"/>
+        </scene>
         <!--Contacts Table View Controller-->
         <scene sceneID="hEp-bd-MB1">
             <objects>
@@ -513,6 +610,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oki-eN-wLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3570" y="454"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rGf-cq-UhJ">
+            <objects>
+                <viewController storyboardIdentifier="viewController" id="YX6-h0-cMl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vql-S1-AoW"/>
+                        <viewControllerLayoutGuide type="bottom" id="rml-Wa-GeZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MCr-73-AJx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5x-Rk-W30" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

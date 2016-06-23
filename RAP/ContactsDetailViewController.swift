@@ -53,8 +53,6 @@ class ContactsDetailViewController: UIViewController {
             descriptionLabel?.text = detailContact?.department
         }
     }
-
-    @IBOutlet weak var test: UIButton!
     
     var detailContact: Contacts!{
         didSet{
@@ -88,6 +86,7 @@ class ContactsDetailViewController: UIViewController {
         let phoneNumber = "tel://" + contact.mobilePhone
         UIApplication.sharedApplication().openURL(NSURL(string: phoneNumber)!)
     }
+    
     @IBAction func clickEmail(sender: UIButton) {
         print("clickEmail")
         
@@ -98,8 +97,13 @@ class ContactsDetailViewController: UIViewController {
         }
         UIApplication.sharedApplication().openURL(NSURL(string: email)!)
     }
+    
     @IBAction func clickPhone(sender: UIButton) {
         
+    }
+    
+    deinit{
+        print("ContactsDetailViewController deinit")
     }
     
 }

@@ -60,6 +60,14 @@ extension UIColor{
     public class func pinkColor() -> UIColor{
         return UIColor(red: 255 / 255, green: 125 / 255, blue: 125 / 255, alpha: 1)
     }
+    
+    public class func darkRedColor() -> UIColor{
+        return UIColor(red: 190 / 255, green: 72 / 255, blue: 72 / 255, alpha: 1)
+    }
+    
+    public class func moneyRedColor() -> UIColor{
+        return UIColor(red: 255 / 255, green: 72 / 255, blue: 72 / 255, alpha: 1)
+    }
 }
 
 extension UIViewController{
