@@ -18,5 +18,21 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "OutpatientReportViewController.processChartData() -&gt; ():OutpatientReportViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIFont(name: ConstantValue.regularFont, size: 10.0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "InpatientReportViewController.setupBarChart() -&gt; ():InpatientReportViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ConstantValue.SemiFont">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

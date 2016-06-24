@@ -103,8 +103,9 @@ extension UIViewController{
 }
 
 struct ConstantValue{
+    static let regularFont: String = "OpenSans"
     static let lightFont: String = "OpenSans-Light"
-    static let boldFond: String = "OpenSans-ExtraBold"
+    static let boldFont: String = "OpenSans-ExtraBold"
     static let userInfo: String = "UserInfo"
     static let userName: String = "userName"
     static let passWord: String = "passWord"

@@ -57,20 +57,21 @@ class OutpatientReportViewController: UIViewController {
         barChartView.rightAxis.enabled = true
         barChartView.legend.textColor = UIColor.whiteColor()
         barChartView.legend.horizontalAlignment = .Right
+        barChartView.legend.font = UIFont(name: ConstantValue.lightFont, size: 14.0)!
         barChartView.animate(yAxisDuration: 0.5)
         
         let xAxis = barChartView.xAxis
         xAxis.labelPosition = .Bottom
         xAxis.axisLineColor = UIColor.whiteColor()
         xAxis.gridColor = UIColor.whiteColor()
-        xAxis.labelFont = UIFont(name: ConstantValue.boldFond, size: 10.0)!
+        xAxis.labelFont = UIFont(name: ConstantValue.boldFont, size: 10.0)!
         xAxis.labelTextColor = UIColor.whiteColor()
         
         let yLeftAxis = barChartView.leftAxis
         yLeftAxis.labelPosition = .OutsideChart
         yLeftAxis.axisLineColor = UIColor.whiteColor()
         yLeftAxis.gridColor = UIColor.whiteColor()
-        yLeftAxis.labelFont = UIFont(name: ConstantValue.boldFond, size: 10.0)!
+        yLeftAxis.labelFont = UIFont(name: ConstantValue.boldFont, size: 10.0)!
         yLeftAxis.labelTextColor = UIColor.whiteColor()
         yLeftAxis.axisMinValue = 0.0
         yLeftAxis.drawGridLinesEnabled = false
@@ -79,7 +80,7 @@ class OutpatientReportViewController: UIViewController {
         yRightAxis.labelPosition = .OutsideChart
         yRightAxis.axisLineColor = UIColor.whiteColor()
         yRightAxis.gridColor = UIColor.whiteColor()
-        yRightAxis.labelFont = UIFont(name: ConstantValue.boldFond, size: 10.0)!
+        yRightAxis.labelFont = UIFont(name: ConstantValue.boldFont, size: 10.0)!
         yRightAxis.labelTextColor = UIColor.whiteColor()
         yRightAxis.axisMinValue = 0.0
         
@@ -93,7 +94,7 @@ class OutpatientReportViewController: UIViewController {
         
         let set = BarChartDataSet(yVals: yValues, label: "Patients Numbers")
         set.setColor(UIColor.darkRedColor())
-        set.valueFont = UIFont(name: ConstantValue.boldFond, size: 10.0)!
+        set.valueFont = UIFont(name: ConstantValue.regularFont, size: 12.0)!
         set.valueTextColor = UIColor.whiteColor()
         set.axisDependency = .Left
         
@@ -104,7 +105,7 @@ class OutpatientReportViewController: UIViewController {
         
         let set1 = BarChartDataSet(yVals: yValues1, label: "Revenues")
         set1.setColor(UIColor.moneyRedColor())
-        set1.valueFont = UIFont(name: ConstantValue.boldFond, size: 10.0)!
+        set1.valueFont = UIFont(name: ConstantValue.regularFont, size: 12.0)!
         set1.valueTextColor = UIColor.whiteColor()
         set1.axisDependency = .Right
         

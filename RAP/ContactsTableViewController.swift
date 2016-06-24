@@ -52,7 +52,7 @@ class ContactsTableViewController: UITableViewController {
         cell?.layoutMargins = UIEdgeInsetsZero
         cell?.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -200)//UIEdgeInsetsZero
         //字体
-        cell?.nameLabel?.font = UIFont(name: ConstantValue.boldFond, size: 19.0)
+        cell?.nameLabel?.font = UIFont(name: ConstantValue.boldFont, size: 19.0)
         cell?.descriptionLabel?.font = UIFont(name: ConstantValue.lightFont, size: 14.0)
         cell?.nameLabel?.text = contactModel.contactItems[indexPath.row].name
         cell?.descriptionLabel?.text = contactModel.contactItems[indexPath.row].department

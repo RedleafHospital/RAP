@@ -31,6 +31,7 @@
 		4377AFEC1CF3DD3E000C846B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4377AFEA1CF3DD3E000C846B /* LaunchScreen.storyboard */; };
 		4377AFF61CF3EE79000C846B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4377AFF51CF3EE79000C846B /* Podfile */; };
 		439835551CF9339A0065088B /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439835541CF9339A0065088B /* MainScreenViewController.swift */; };
+		439B83961D1D0AD800874501 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 439B83951D1D0AD800874501 /* OpenSans-Regular.ttf */; };
 		7056CF52726D38FDD3DDCE03 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7B240CBC2BAB0997C880B0 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		4377AFED1CF3DD3E000C846B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4377AFF51CF3EE79000C846B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		439835541CF9339A0065088B /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		439B83951D1D0AD800874501 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		A97CFFA78E507FDB113C1BEF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +166,7 @@
 			children = (
 				432A3D311CF7D3BC00293656 /* OpenSans-ExtraBold.ttf */,
 				432A3D321CF7D3BC00293656 /* OpenSans-Light.ttf */,
+				439B83951D1D0AD800874501 /* OpenSans-Regular.ttf */,
 			);
 			name = ttf;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				432A3D341CF7D3BC00293656 /* OpenSans-Light.ttf in Resources */,
 				4377AFEC1CF3DD3E000C846B /* LaunchScreen.storyboard in Resources */,
 				4377AFE91CF3DD3E000C846B /* Assets.xcassets in Resources */,
+				439B83961D1D0AD800874501 /* OpenSans-Regular.ttf in Resources */,
 				4377AFF61CF3EE79000C846B /* Podfile in Resources */,
 				4377AFE71CF3DD3E000C846B /* Main.storyboard in Resources */,
 				432A3D331CF7D3BC00293656 /* OpenSans-ExtraBold.ttf in Resources */,

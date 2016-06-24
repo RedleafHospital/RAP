@@ -43,7 +43,7 @@ class SideBarTableViewController: UITableViewController {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
             cell!.backgroundColor = UIColor.clearColor()
             cell!.textLabel?.textColor = UIColor.lightTextColor()
-            cell!.textLabel?.font = UIFont(name: ConstantValue.boldFond, size: 17.0)
+            cell!.textLabel?.font = UIFont(name: ConstantValue.boldFont, size: 17.0)
             
             cell!.selectedBackgroundView = UIView(frame: CGRectMake(0, 0, cell!.frame.size.width, cell!.frame.size.height))
             cell!.selectedBackgroundView?.backgroundColor = UIColor.darkPinkColor().colorWithAlphaComponent(0.2)

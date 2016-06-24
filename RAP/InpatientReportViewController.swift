@@ -51,6 +51,7 @@ class InpatientReportViewController: UIViewController {
         pieChartView.legend.horizontalAlignment = .Center
         pieChartView.legend.yOffset = 30.0
         pieChartView.legend.textColor = UIColor.whiteColor()
+        pieChartView.legend.font = UIFont(name: ConstantValue.lightFont, size: 14.0)!
         
         let paragraphStyle = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
         paragraphStyle.lineBreakMode = NSLineBreakMode.ByTruncatingTail
@@ -59,7 +60,7 @@ class InpatientReportViewController: UIViewController {
         let attrString = NSMutableAttributedString(string: "Childbirth\nNumbers")
         attrString.setAttributes([
             NSForegroundColorAttributeName: NSUIColor.whiteColor(),
-            NSFontAttributeName: UIFont(name: ConstantValue.boldFond, size: 16.0)!,
+            NSFontAttributeName: UIFont(name: ConstantValue.boldFont, size: 16.0)!,
             NSParagraphStyleAttributeName: paragraphStyle
             ], range: NSMakeRange(0, attrString.length))
         
@@ -75,13 +76,13 @@ class InpatientReportViewController: UIViewController {
         
         let set = PieChartDataSet(yVals: yValues, label: nil)
         set.setColors([UIColor.pink1Color(), UIColor.pink2Color(), UIColor.pink3Color()], alpha: 1)
-        set.sliceSpace = 20
+        set.sliceSpace = 10
         
         var sets = [PieChartDataSet]()
         sets.append(set)
         
         pieChartView.data = PieChartData(xVals: charDataModel.childBirthNumberXAxisData, dataSets: sets)
-        pieChartView.data!.setValueFont(UIFont(name: ConstantValue.boldFond, size: 18.0)!)
+        pieChartView.data!.setValueFont(UIFont(name: ConstantValue.boldFont, size: 18.0)!)
         pieChartView.data!.setValueTextColor(UIColor.whiteColor())
         let numberFormatter = NSNumberFormatter()
         numberFormatter.numberStyle = .NoStyle

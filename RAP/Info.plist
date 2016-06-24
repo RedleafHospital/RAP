@@ -40,6 +40,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>OpenSans-Regular.ttf</string>
 		<string>OpenSans-ExtraBold.ttf</string>
 		<string>OpenSans-Light.ttf</string>
 	</array>
