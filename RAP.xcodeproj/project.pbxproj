@@ -13,7 +13,7 @@
 		430C59881D051B4000577692 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430C59871D051B4000577692 /* ContactsModel.swift */; };
 		430C598A1D05617900577692 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430C59891D05617900577692 /* ContactsTableViewCell.swift */; };
 		430CAC1B1CFBD482003433CF /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430CAC1A1CFBD482003433CF /* MainScreenCollectionViewCell.swift */; };
-		4316AF121D19064100E5F7FB /* DailyRevenueReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4316AF111D19064100E5F7FB /* DailyRevenueReportViewController.swift */; };
+		4316AF121D19064100E5F7FB /* OutpatientReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4316AF111D19064100E5F7FB /* OutpatientReportViewController.swift */; };
 		431CB8251CF448A300238EE1 /* ResizeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CB8241CF448A300238EE1 /* ResizeNavigationBar.swift */; };
 		432321C11CFE7C8400762271 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432321BF1CFE7C8400762271 /* SideBar.swift */; };
 		432321C21CFE7C8400762271 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432321C01CFE7C8400762271 /* SideBarTableViewController.swift */; };
@@ -22,6 +22,8 @@
 		432A3D361CF7DCFC00293656 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A3D351CF7DCFC00293656 /* LoginViewController.swift */; };
 		432A3D3A1CF80EB900293656 /* UnderLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A3D391CF80EB900293656 /* UnderLineView.swift */; };
 		432A3D3C1CF8287700293656 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432A3D3B1CF8287700293656 /* LoginModel.swift */; };
+		43532F511D1B6B610083B7E1 /* DailyRevenueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43532F501D1B6B610083B7E1 /* DailyRevenueModel.swift */; };
+		43532F561D1B81B60083B7E1 /* InpatientReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43532F551D1B81B60083B7E1 /* InpatientReportViewController.swift */; };
 		4377AFE21CF3DD3E000C846B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377AFE11CF3DD3E000C846B /* AppDelegate.swift */; };
 		4377AFE41CF3DD3E000C846B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377AFE31CF3DD3E000C846B /* ViewController.swift */; };
 		4377AFE71CF3DD3E000C846B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4377AFE51CF3DD3E000C846B /* Main.storyboard */; };
@@ -41,7 +43,7 @@
 		430C59871D051B4000577692 /* ContactsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
 		430C59891D05617900577692 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		430CAC1A1CFBD482003433CF /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
-		4316AF111D19064100E5F7FB /* DailyRevenueReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRevenueReportViewController.swift; sourceTree = "<group>"; };
+		4316AF111D19064100E5F7FB /* OutpatientReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutpatientReportViewController.swift; sourceTree = "<group>"; };
 		431CB8241CF448A300238EE1 /* ResizeNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeNavigationBar.swift; sourceTree = "<group>"; };
 		432321BF1CFE7C8400762271 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		432321C01CFE7C8400762271 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		432A3D351CF7DCFC00293656 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		432A3D391CF80EB900293656 /* UnderLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnderLineView.swift; sourceTree = "<group>"; };
 		432A3D3B1CF8287700293656 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		43532F501D1B6B610083B7E1 /* DailyRevenueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRevenueModel.swift; sourceTree = "<group>"; };
+		43532F551D1B81B60083B7E1 /* InpatientReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InpatientReportViewController.swift; sourceTree = "<group>"; };
 		4377AFDE1CF3DD3E000C846B /* RAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4377AFE11CF3DD3E000C846B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4377AFE31CF3DD3E000C846B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 				432A3D3B1CF8287700293656 /* LoginModel.swift */,
 				4300E3281CFD275E00FE8DA1 /* MainScreenModel.swift */,
 				430C59871D051B4000577692 /* ContactsModel.swift */,
+				43532F501D1B6B610083B7E1 /* DailyRevenueModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -101,7 +106,8 @@
 				432321C01CFE7C8400762271 /* SideBarTableViewController.swift */,
 				430C59851D05180500577692 /* ContactsTableViewController.swift */,
 				4305408F1D0E41F50051122A /* ContactsDetailViewController.swift */,
-				4316AF111D19064100E5F7FB /* DailyRevenueReportViewController.swift */,
+				4316AF111D19064100E5F7FB /* OutpatientReportViewController.swift */,
+				43532F551D1B81B60083B7E1 /* InpatientReportViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -141,9 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				4377AFE11CF3DD3E000C846B /* AppDelegate.swift */,
+				4300E32A1CFD775800FE8DA1 /* Model */,
 				4300E32C1CFD778F00FE8DA1 /* View */,
 				4300E32B1CFD776C00FE8DA1 /* Controller */,
-				4300E32A1CFD775800FE8DA1 /* Model */,
 				43FE7E201CF58F4500DF2A8C /* ttf */,
 				4377AFE51CF3DD3E000C846B /* Main.storyboard */,
 				4377AFEA1CF3DD3E000C846B /* LaunchScreen.storyboard */,
@@ -303,10 +309,12 @@
 				430C59861D05180500577692 /* ContactsTableViewController.swift in Sources */,
 				432A3D3C1CF8287700293656 /* LoginModel.swift in Sources */,
 				439835551CF9339A0065088B /* MainScreenViewController.swift in Sources */,
+				43532F511D1B6B610083B7E1 /* DailyRevenueModel.swift in Sources */,
 				431CB8251CF448A300238EE1 /* ResizeNavigationBar.swift in Sources */,
 				4377AFE41CF3DD3E000C846B /* ViewController.swift in Sources */,
+				43532F561D1B81B60083B7E1 /* InpatientReportViewController.swift in Sources */,
 				430CAC1B1CFBD482003433CF /* MainScreenCollectionViewCell.swift in Sources */,
-				4316AF121D19064100E5F7FB /* DailyRevenueReportViewController.swift in Sources */,
+				4316AF121D19064100E5F7FB /* OutpatientReportViewController.swift in Sources */,
 				4377AFE21CF3DD3E000C846B /* AppDelegate.swift in Sources */,
 				432A3D3A1CF80EB900293656 /* UnderLineView.swift in Sources */,
 				430540901D0E41F50051122A /* ContactsDetailViewController.swift in Sources */,

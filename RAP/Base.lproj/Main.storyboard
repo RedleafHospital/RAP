@@ -18,8 +18,14 @@
             <string>OpenSans-Extrabold</string>
             <string>OpenSans-Extrabold</string>
             <string>OpenSans-Extrabold</string>
+            <string>OpenSans-Extrabold</string>
+            <string>OpenSans-Extrabold</string>
+            <string>OpenSans-Extrabold</string>
         </mutableArray>
         <mutableArray key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+            <string>OpenSans-Light</string>
+            <string>OpenSans-Light</string>
             <string>OpenSans-Light</string>
             <string>OpenSans-Light</string>
             <string>OpenSans-Light</string>
@@ -423,10 +429,10 @@
             </objects>
             <point key="canvasLocation" x="5695" y="454"/>
         </scene>
-        <!--Daily Revenue Report View Controller-->
+        <!--Outpatient Report View Controller-->
         <scene sceneID="J8v-ue-9nh">
             <objects>
-                <viewController storyboardIdentifier="DailyRevenueReportViewController" id="ybZ-X6-E3C" customClass="DailyRevenueReportViewController" customModule="RAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OutpatientReportViewController" id="ybZ-X6-E3C" customClass="OutpatientReportViewController" customModule="RAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AiL-DK-dGv"/>
                         <viewControllerLayoutGuide type="bottom" id="hll-OG-cwN"/>
@@ -472,16 +478,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywy-rt-xXc" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="171" width="560" height="399"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfE-FM-Vm2">
-                                <rect key="frame" x="548.5" y="63" width="21.5" height="25"/>
+                                <rect key="frame" x="548" y="63" width="21.5" height="25"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywy-rt-xXc" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="171" width="560" height="399"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -507,12 +513,134 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="appointmentsLabel" destination="zfE-FM-Vm2" id="fEN-mF-GN8"/>
                         <outlet property="barChartView" destination="ywy-rt-xXc" id="hgL-j4-WBR"/>
+                        <outlet property="revenueLabel" destination="kUm-lK-dMn" id="y5K-bJ-frM"/>
+                        <outlet property="visitsLabel" destination="ytf-Ey-pjr" id="5MY-rg-Mun"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNL-ij-K9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6233" y="386"/>
+        </scene>
+        <!--Inpatient Report View Controller-->
+        <scene sceneID="95Y-IU-El8">
+            <objects>
+                <viewController storyboardIdentifier="InpatientReportViewController" id="mbO-Fc-0NL" customClass="InpatientReportViewController" customModule="RAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tNm-ep-RqD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uu2-uo-xPe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="32Q-SE-yk3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jL-X3-2y7" customClass="UnderLineView" customModule="RAP" customModuleProvider="target">
+                                <rect key="frame" x="30" y="90" width="600" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="F5n-Ib-Nuw"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9i-wY-kXa">
+                                <rect key="frame" x="91" y="63" width="21.5" height="25"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admission" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YX3-VJ-gjp">
+                                <rect key="frame" x="50" y="93" width="103" height="30"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nau-de-kxG">
+                                <rect key="frame" x="394.5" y="63" width="21.5" height="25"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discharge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pc-Ac-Axz">
+                                <rect key="frame" x="356" y="93" width="98" height="30"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="76" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaE-1a-fJ8">
+                                <rect key="frame" x="516.5" y="63" width="21.5" height="25"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Hospital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbV-On-2CD">
+                                <rect key="frame" x="474" y="93" width="106" height="30"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O29-2m-MCc" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="148" width="600" height="452"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Pc-Ac-Axz" firstAttribute="leading" secondItem="YX3-VJ-gjp" secondAttribute="trailing" constant="30" id="1Mb-If-wnK"/>
+                            <constraint firstItem="O29-2m-MCc" firstAttribute="top" secondItem="YX3-VJ-gjp" secondAttribute="bottom" constant="25" id="20N-7h-sE0"/>
+                            <constraint firstItem="8Pc-Ac-Axz" firstAttribute="centerY" secondItem="YX3-VJ-gjp" secondAttribute="centerY" id="2bA-sw-ziD"/>
+                            <constraint firstItem="MbV-On-2CD" firstAttribute="centerY" secondItem="8Pc-Ac-Axz" secondAttribute="centerY" id="5Bc-wR-CfJ"/>
+                            <constraint firstItem="3jL-X3-2y7" firstAttribute="top" secondItem="l9i-wY-kXa" secondAttribute="bottom" constant="2" id="77O-e3-Zgy"/>
+                            <constraint firstItem="eaE-1a-fJ8" firstAttribute="trailing" secondItem="MbV-On-2CD" secondAttribute="trailing" id="AWc-D5-jVh"/>
+                            <constraint firstItem="eaE-1a-fJ8" firstAttribute="centerY" secondItem="Nau-de-kxG" secondAttribute="centerY" id="BNs-AB-RKU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MbV-On-2CD" secondAttribute="trailing" id="Ecu-xc-3lo"/>
+                            <constraint firstItem="eaE-1a-fJ8" firstAttribute="centerX" secondItem="MbV-On-2CD" secondAttribute="centerX" id="Fkh-ex-lkT"/>
+                            <constraint firstItem="l9i-wY-kXa" firstAttribute="centerX" secondItem="YX3-VJ-gjp" secondAttribute="centerX" id="Hff-Nh-PSM"/>
+                            <constraint firstItem="Nau-de-kxG" firstAttribute="trailing" secondItem="8Pc-Ac-Axz" secondAttribute="trailing" id="MNv-nd-izc"/>
+                            <constraint firstItem="Uu2-uo-xPe" firstAttribute="top" secondItem="O29-2m-MCc" secondAttribute="bottom" id="Mdj-4I-911"/>
+                            <constraint firstItem="YX3-VJ-gjp" firstAttribute="leading" secondItem="32Q-SE-yk3" secondAttribute="leadingMargin" constant="30" id="S9D-yf-xbc"/>
+                            <constraint firstItem="l9i-wY-kXa" firstAttribute="trailing" secondItem="YX3-VJ-gjp" secondAttribute="trailing" id="UcS-3G-3Fa"/>
+                            <constraint firstItem="Nau-de-kxG" firstAttribute="trailing" secondItem="8Pc-Ac-Axz" secondAttribute="trailing" id="VH0-vz-iVp"/>
+                            <constraint firstItem="YX3-VJ-gjp" firstAttribute="top" secondItem="3jL-X3-2y7" secondAttribute="bottom" constant="2" id="XxA-zo-kFB"/>
+                            <constraint firstItem="l9i-wY-kXa" firstAttribute="centerX" secondItem="YX3-VJ-gjp" secondAttribute="centerX" id="YIL-Ok-UNz"/>
+                            <constraint firstItem="MbV-On-2CD" firstAttribute="leading" secondItem="8Pc-Ac-Axz" secondAttribute="trailing" constant="20" id="ZH9-3p-2y7"/>
+                            <constraint firstItem="l9i-wY-kXa" firstAttribute="trailing" secondItem="YX3-VJ-gjp" secondAttribute="trailing" id="clx-L8-ubo"/>
+                            <constraint firstItem="3jL-X3-2y7" firstAttribute="top" secondItem="tNm-ep-RqD" secondAttribute="bottom" constant="70" id="daw-Dv-oYw"/>
+                            <constraint firstItem="Nau-de-kxG" firstAttribute="centerY" secondItem="l9i-wY-kXa" secondAttribute="centerY" id="dlE-nj-uyL"/>
+                            <constraint firstItem="Nau-de-kxG" firstAttribute="trailing" secondItem="8Pc-Ac-Axz" secondAttribute="trailing" constant="-98.5" id="duW-Nf-Sqy"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3jL-X3-2y7" secondAttribute="leading" constant="-10" id="h93-Es-yAs"/>
+                            <constraint firstItem="eaE-1a-fJ8" firstAttribute="centerX" secondItem="MbV-On-2CD" secondAttribute="centerX" id="kGL-yp-Ije"/>
+                            <constraint firstItem="O29-2m-MCc" firstAttribute="leading" secondItem="32Q-SE-yk3" secondAttribute="leading" id="leq-Wx-kav"/>
+                            <constraint firstItem="3jL-X3-2y7" firstAttribute="width" secondItem="32Q-SE-yk3" secondAttribute="width" id="mPd-02-dlD"/>
+                            <constraint firstItem="MbV-On-2CD" firstAttribute="leading" secondItem="8Pc-Ac-Axz" secondAttribute="trailing" constant="30" id="mpk-L8-N5y"/>
+                            <constraint firstItem="eaE-1a-fJ8" firstAttribute="trailing" secondItem="MbV-On-2CD" secondAttribute="trailing" id="oOW-9N-vv7"/>
+                            <constraint firstItem="Nau-de-kxG" firstAttribute="centerX" secondItem="8Pc-Ac-Axz" secondAttribute="centerX" id="pAf-Gz-2Oj"/>
+                            <constraint firstItem="Nau-de-kxG" firstAttribute="centerX" secondItem="8Pc-Ac-Axz" secondAttribute="centerX" id="rcf-Qr-Pd4"/>
+                            <constraint firstAttribute="trailing" secondItem="O29-2m-MCc" secondAttribute="trailing" id="uHX-cw-oEj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Hff-Nh-PSM"/>
+                                <exclude reference="UcS-3G-3Fa"/>
+                                <exclude reference="clx-L8-ubo"/>
+                                <exclude reference="1Mb-If-wnK"/>
+                                <exclude reference="MNv-nd-izc"/>
+                                <exclude reference="VH0-vz-iVp"/>
+                                <exclude reference="duW-Nf-Sqy"/>
+                                <exclude reference="rcf-Qr-Pd4"/>
+                                <exclude reference="mpk-L8-N5y"/>
+                                <exclude reference="AWc-D5-jVh"/>
+                                <exclude reference="Fkh-ex-lkT"/>
+                                <exclude reference="oOW-9N-vv7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pieChartView" destination="O29-2m-MCc" id="hMR-4c-ama"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPP-bs-ipu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6954" y="386"/>
         </scene>
         <!--Contacts Table View Controller-->
         <scene sceneID="hEp-bd-MB1">
